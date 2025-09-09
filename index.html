@@ -88,6 +88,32 @@ a:hover {
 .mobtitle {
   color: #000;
 }
+/* NEW ANIMATION STYLES */
+.project-image {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 8px;
+  margin: 15px 0;
+  transition: transform 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.project-image:hover {
+  transform: scale(1.05);
+}
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 15px;
+}
+.skill-badge {
+  background: linear-gradient(45deg, #007acc, #0056b3);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 15px;
+  font-size: 0.8em;
+  margin: 2px;
+  display: inline-block;
+}
 </style>
 </head>
 <body>
@@ -95,7 +121,7 @@ a:hover {
   <h1>Vaishnavi Maske</h1>
   <p class="subtitle">React Native Developer | Nagpur, India | Ready to Relocate</p>
   <div class="contact-info">
-    <p >📱 +91-8983759429 | 📧 <a href="mailto:vaishnavi.g.maske@gmail.com" style="color: black;">vaishnavi.g.maske@gmail.com</a></p>
+    <p>📱 +91-8983759429 | 📧 <a href="mailto:vaishnavi.g.maske@gmail.com" style="color: black;">vaishnavi.g.maske@gmail.com</a></p>
     <p>🔗 <a href="https://www.linkedin.com/in/vaishnavi-maske/" style="color: black;">LinkedIn</a> | 
        💻 <a href="https://github.com/vaish8529" style="color: black;">GitHub</a> |
        📚 <a href="https://stackoverflow.com/users/19153194/vaishnavi-maske" style="color: black;">StackOverflow</a></p>
@@ -105,7 +131,6 @@ a:hover {
 <section>
   <h2>🎯 Professional Summary</h2>
   <p>React Native Engineer with 5+ years of experience building production-grade mobile applications serving thousands of users. Expert in full mobile development lifecycle from UI implementation to Play Store deployment, CI/CD pipeline management, and performance optimization. Proven expertise in fintech/insurance domains with complex integrations, security implementations, delivering scalable solutions in both product and service-based environments.</p>
-  
   <div class="metrics">
     <p>🚀 Key Achievements: 3,500+ users | 48% revenue growth | 38% faster load times | 40% deployment time reduction</p>
   </div>
@@ -113,27 +138,43 @@ a:hover {
 
 <section>
   <h2>💻 Technical Skills</h2>
-  <ul>
-    <li><strong>Mobile Development:</strong> Android & iOS development, Cross-platform architecture, React Native CLI, Expo</li>
-    <li><strong>Programming Languages:</strong> JavaScript ES6+, TypeScript, HTML5, CSS3, JSX</li>
-    <li><strong>State Management & Architecture:</strong> Redux, Redux Toolkit, Context API, Async Storage</li>
-    <li><strong>Native Integrations:</strong> Facebook SDK, Google SDK, Camera/Gallery APIs, Push notifications (FCM)</li>
-    <li><strong>Security & Performance:</strong> SSL Pinning, Reverse engineering protection, Code obfuscation, Performance optimization</li>
-    <li><strong>Development Tools:</strong> Git, VS Code, Android Studio, Flipper, ESLint, Prettier</li>
-    <li><strong>Build & Deployment:</strong> Built and deployed React applications across multiple environments using SSH terminal, managed multi-stage release cycles and environment-specific configurations</li>
-  </ul>
+  <div class="skills-grid">
+    <div>
+      <h4>Mobile Development</h4>
+      <span class="skill-badge">React Native</span>
+      <span class="skill-badge">Android</span>
+      <span class="skill-badge">iOS</span>
+      <span class="skill-badge">Expo</span>
+    </div>
+    <div>
+      <h4>Programming Languages</h4>
+      <span class="skill-badge">JavaScript ES6+</span>
+      <span class="skill-badge">TypeScript</span>
+      <span class="skill-badge">HTML5</span>
+      <span class="skill-badge">CSS3</span>
+    </div>
+    <div>
+      <h4>State Management</h4>
+      <span class="skill-badge">Redux Toolkit</span>
+      <span class="skill-badge">Context API</span>
+      <span class="skill-badge">Async Storage</span>
+    </div>
+    <div>
+      <h4>Currently Learning</h4>
+      <span class="skill-badge">GraphQL</span>
+      <span class="skill-badge">Flutter</span>
+      <span class="skill-badge">AWS</span>
+    </div>
+  </div>
 </section>
 
 <section>
   <h2>💼 Professional Experience</h2>
-  
   <h3>EliteGeneral Insurance Brokers Pvt Ltd, Nagpur</h3>
   <p><em>Senior React Native Engineer (Team Lead) | Oct 2022 - Present</em></p>
-  
   <div class="achievement">
     <p><strong>🏆 Major Achievement:</strong> Led development serving 3,500+ users with 48% revenue growth</p>
   </div>
-  
   <ul>
     <li>Led end-to-end development and deployment of React Native applications using JavaScript/TypeScript ES6+, serving <strong>3,500+ users</strong> and driving <strong>48% revenue growth</strong> through scalable cross-platform architecture</li>
     <li>Architected and optimized performance by reducing JS thread blockage and implementing efficient rendering strategies, resulting in <strong>40% faster load times</strong> and improved user experience</li>
@@ -141,7 +182,7 @@ a:hover {
     <li>Established CI/CD pipelines with automated testing frameworks, reducing <strong>deployment times by 40%</strong> and implementing robust debugging tools for continuous integration</li>
     <li>Mentored development team through code reviews, best practices enforcement, and technical interviews while contributing to engineering roadmaps and cross-functional collaboration</li>
   </ul>
-
+  
   <h3>Webakruti, Nagpur</h3>
   <p><em>React Native Developer | Feb 2020 - Sep 2022</em></p>
   <ul>
@@ -150,7 +191,7 @@ a:hover {
     <li>Integrated Facebook SDK for social login, Google SDK for maps and analytics, Firebase for push notifications</li>
     <li>Implemented <strong>SSL pinning and reverse engineering protection measures</strong> for banking and fintech applications, ensuring data security and compliance</li>
   </ul>
-
+  
   <h3>Webgurukul, Nagpur</h3>
   <p><em>Frontend Developer Intern | Jul 2019 - Jan 2020</em></p>
   <ul>
@@ -158,20 +199,22 @@ a:hover {
   </ul>
 </section>
 
+<!-- ANIMATED PROJECTS SECTION -->
 <section>
   <h2>🚀 Featured Projects</h2>
   
   <h3>react-native-basic-dropdown (Open Source)</h3>
+  <img src="https://media.giphy.com/media/ZVik7pBtu9dNS/giphy.gif" alt="React Native Development Animation" class="project-image" />
   <div class="achievement">
     <p><strong>🎯 Impact:</strong> 1,000+ npm downloads with active community usage</p>
   </div>
   <ul>
     <li><strong>Description:</strong> Created TypeScript-compatible React Native dropdown component with customizable styling and accessibility features
-      ✅ Supports dynamic list rendering 
-      ✅ Full TypeScript support included
-      ✅ Designed for clean integration 
-      ✅ Minimal setup, ready to use in production
-      ✅ 0 issues reported till now
+      <br>✅ Supports dynamic list rendering 
+      <br>✅ Full TypeScript support included
+      <br>✅ Designed for clean integration 
+      <br>✅ Minimal setup, ready to use in production
+      <br>✅ 0 issues reported till now
     </li>
     <li><strong>Maintenance:</strong> Actively maintained with regular updates and community support</li>
     <li><strong>Technologies:</strong> TypeScript, React Native, Accessibility APIs</li>
@@ -179,6 +222,7 @@ a:hover {
   </ul>
 
   <h3>BreezeBook Financial Platform</h3>
+  <img src="https://media.giphy.com/media/l2JehQ2GitHGdVG9y/giphy.gif" alt="Financial App Development Animation" class="project-image" />
   <ul>
     <li><strong>Description:</strong> Developed high-performance React Native application featuring advanced image processing for document verification</li>
     <li><strong>Features:</strong> Real-time document processing, secure financial transactions, advanced image recognition</li>
@@ -186,6 +230,7 @@ a:hover {
   </ul>
 
   <h3>Insurance Mobile Application (Current Role)</h3>
+  <img src="https://media.giphy.com/media/xT9IgzoKnwFNmISR8I/giphy.gif" alt="Mobile App Development Animation" class="project-image" />
   <div class="achievement">
     <p><strong>📊 Business Impact:</strong> Serving 3,500+ users with 48% revenue growth contribution</p>
   </div>
@@ -201,7 +246,6 @@ a:hover {
   <h2>🎓 Education</h2>
   <p><strong>Bachelor of Computer Science and Engineering</strong><br>
   Nagpur University | Jun 2013 - Jun 2017</p>
-  
   <h3>Continuous Learning & Development</h3>
   <ul>
     <li><strong>Currently Learning:</strong> GraphQL integration with React Native & Flutter for cross-platform mobile development</li>
@@ -226,15 +270,14 @@ a:hover {
 <section>
   <h2>🌍 Career Objective</h2>
   <p>Seeking challenging React Native Developer opportunities where I can leverage my 5+ years of experience in building high-performance mobile applications. Ready to contribute to innovative projects while continuing to grow in cross-platform mobile development and team leadership roles.</p>
-  
   <div class="metrics">
-    <p>✅ Available for immediate joining | | ✅ Open to Remote opportunities | ✅ Ready for relocation | ✅ Open to UAE opportunities</p>
+    <p>✅ Available for immediate joining | ✅ Open to Remote opportunities | ✅ Ready for relocation | ✅ Open to UAE opportunities</p>
   </div>
 </section>
 
 <footer>
   <p>© 2025 Vaishnavi Maske | React Native Developer Portfolio</p>
-  <p>🌐 Portfolio URL: https://vaish8529.github.io | Last Updated: September 2025</p>
+  <p>🌐 Portfolio URL: <a href="https://vaish8529.github.io">https://vaish8529.github.io</a> | Last Updated: September 2025</p>
 </footer>
 </body>
 </html>
